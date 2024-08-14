@@ -1,10 +1,10 @@
 name: Demo Workflow
 on: [push]
 env:
-  owner_name: ${{ MY_REPO_VARIABLE }}
+  owner_name: ${{ vars.MY_REPO_VARIABLE }}
 
 jobs:
     BASIC_WORKFLOW:
       runs-on: ubuntu-latest
       steps:
-        - run: echo "Job BASIC WORKFLOW from $owner_name"
+        - run: echo "Job BASIC WORKFLOW from ${{ vars.MY_REPO_VARIABLE }}"
