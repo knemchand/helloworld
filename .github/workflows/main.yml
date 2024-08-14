@@ -1,7 +1,7 @@
 name: Demo Workflow
 on: [push]
 env:
-  owner_name: ${{MY_REPO_VARIABLE}}
+  owner_name: ${{ MY_REPO_VARIABLE }}
 
 jobs:
     BASIC_WORKFLOW:
