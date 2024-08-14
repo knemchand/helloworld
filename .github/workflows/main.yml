@@ -7,4 +7,4 @@ jobs:
     BASIC_WORKFLOW:
       runs-on: ubuntu-latest
       steps:
-        - run: echo "Job BASIC WORKFLOW from {{ $MY_REPO_VARIABLE}}"
+        - run: echo "Job BASIC WORKFLOW from ${{MY_REPO_VARIABLE}}"
