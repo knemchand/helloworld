@@ -8,7 +8,8 @@ env:
   owner_name: ${{ vars.MY_REPO_VARIABLE }}
 
 jobs:
-    BASIC_WORKFLOW:
-      runs-on: ubuntu-latest
-      steps:
-        - run: echo "Job BASIC WORKFLOW from ${{ vars.MY_REPO_VARIABLE }}"
+  BASIC_WORKFLOW:
+    if: startswith(github.ref, 'refs/heads/main')
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Job BASIC WORKFLOW from ${{ vars.MY_REPO_VARIABLE }}"
